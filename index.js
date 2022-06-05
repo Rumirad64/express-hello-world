@@ -4,7 +4,8 @@ var app = express()
 app.get('/', function (req, res) {
   res.send('Hello World!')
 })
-
-app.listen(35000, '127.0.0.1', function () {
+const port = process.env.PORT;
+console.log("port -> " + port );
+app.listen(port, '0.0.0.0', function () {
   console.log('Listening on port 3000...')
 })
